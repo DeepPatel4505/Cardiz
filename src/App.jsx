@@ -12,7 +12,7 @@ import ResultsPage from "./pages/ResultsPage.jsx";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/Cardiz">
             <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/judgement" element={<JudgementPage />} />
