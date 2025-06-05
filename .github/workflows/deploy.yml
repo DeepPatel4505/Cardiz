@@ -1,5 +1,5 @@
 name : Deploy Cardiz to Production
-on
+on:
   push:
     branches:
       - main
