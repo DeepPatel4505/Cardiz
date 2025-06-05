@@ -1,0 +1,13 @@
+{
+    "files": [
+        "src/App.jsx"
+    ],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    }
+
+    
+}

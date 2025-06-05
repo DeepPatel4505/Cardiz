@@ -1,0 +1,10 @@
+/* Full height setup */
+html, body, #root {
+  background: #000000; /* or your preferred dark color matching your app */
+  overscroll-behavior: contain;
+  overscroll-behavior-y: contain; /* Prevents overscroll effects */
+}
+
+body {
+  overscroll-behavior-y: contain; /* or 'none' */
+}
