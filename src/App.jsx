@@ -1,5 +1,5 @@
 // App.jsx
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import JudgementPage from "./pages/JudgementPage.jsx";
 import SpadeOf3Page from "./pages/SpadeOf3Page.jsx";
