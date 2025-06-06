@@ -1,10 +1,11 @@
 import { useJudgement } from "@/context/JudgementContext";
 import { Button } from "@/components/ui/button";
 import { Download, Trophy } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 
 export default function ResultsPage() {
-    const { gameState } = useJudgement();
+    const { gameState, resetGame } = useJudgement();
+    const navigate = useNavigate();
 
     const headers = ["Round", "Trump", ...gameState.players];
 
@@ -42,6 +43,20 @@ export default function ResultsPage() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white px-4 py-8">
             <div className="max-w-3xl mx-auto space-y-6">
+                <h1
+                    className="text-5xl font-bold text-center mb-4 cursor-pointer 
+             bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 
+             bg-clip-text text-transparent transition duration-300 hover:scale-105 
+             leading-[1.2]"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        resetGame();
+                        navigate("/");
+                    }}
+                >
+                    JUDGEMENT
+                </h1>
+
                 <h2 className="text-3xl font-bold text-center mb-4">
                     Game Results
                 </h2>

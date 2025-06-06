@@ -19,12 +19,16 @@ const defaultState = {
     specialPlayerIndex: 0,
 };
 
-
 export const JudgementProvider = ({ children }) => {
     const [gameState, setGameState] = useState(() => {
         const stored = localStorage.getItem("judgementState");
         return stored ? JSON.parse(stored) : defaultState;
     });
+
+    const resetGame = () => {
+        setGameState(defaultState);
+        localStorage.removeItem("judgementState");
+    };
 
     // Save to localStorage whenever state updates
     useEffect(() => {
@@ -32,7 +36,7 @@ export const JudgementProvider = ({ children }) => {
     }, [gameState]);
 
     return (
-        <JudgementContext.Provider value={{ gameState, setGameState }}>
+        <JudgementContext.Provider value={{ gameState, setGameState, resetGame }}>
             {children}
         </JudgementContext.Provider>
     );

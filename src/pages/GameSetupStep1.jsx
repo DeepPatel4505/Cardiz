@@ -28,6 +28,7 @@ export default function GameSetupStep1() {
             players,
             maxCards,
             totalRounds,
+            number_of_players: playerCount,
         }));
         navigate("/judgement/setup/players");
     };
