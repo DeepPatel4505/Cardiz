@@ -96,6 +96,7 @@ function reducer(state, action) {
             return {
                 ...state,
                 currentRound: state.currentRound + 1,
+                specialPlayerIndex : (state.specialPlayerIndex + 1) % state.number_of_players
             };
 
         // Manually override all scores (used for loading saved data)
